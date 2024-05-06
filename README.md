@@ -8,4 +8,3 @@ Overall, while the dataset shows a strong presence of policy and basic property 
 The summary statistics for this dataset include measures of central tendency, dispersion, and range, all of which are critical for understanding the distribution and potential data quality issues within the dataset. The information provides a comprehensive overview of various insurance policy and property-related analyses and patterns.
 
 -- Please refer to the [FEMA Data Exploration Jupyter Notebook](pyspark.ipynb) file to review data exploration on summary statistics and data distribution. --
-[View Notebook](pyspark.ipynb)
