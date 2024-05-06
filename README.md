@@ -9,3 +9,6 @@ The summary statistics for this dataset include measures of central tendency, di
 
 -- Please refer to the pyspark.ipynb file to review data exploration on summary statistics and data distribution. --
 
+jupyter nbconvert --execute --to markdown pyspark.ipynb
+[View Notebook](pyspark.md)
+{% include tester.md %}
