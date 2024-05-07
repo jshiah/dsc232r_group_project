@@ -18,3 +18,6 @@ To download the FEMA dataset, please refer to the link:
 
 
 Environment Setup Instructions
+1. Download the FEMA dataset (from link above) from the folder with the cloned GitHub repository.
+2. Unzip the downloaded dataset.
+3. Load the dataset into [pyspark.ipynb](pyspark.ipynb) and run the notebook.
