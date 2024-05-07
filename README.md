@@ -11,3 +11,11 @@ The summary statistics for this dataset include measures of central tendency, di
 
 As for data visualization, the preprocessing of the data introduced a few challenges. When attempting to drop all null values from the FEMA dataset, the dropna() method removed every observation in the entire data frame, rendering the dataset completely empty after the method was executed. In order to properly handle the null values, the decision was made to impute each null element with the mean of all values from the respective column. Imputing null values with the column values’ means resolved the issue of skewing data visualization due to null values. The second challenge of the data preprocessing step involved dealing with the dataset size being too large to perform data visualizations on. Using the entire dataset to visualize a general relationship between the variables was not possible, so the methods .sample() and .toPandas() were used to successfully visualize only a sample of the dataset. After testing out various percentage values in the Fraction parameter, 0.1 proved to be the only parameter value that would work properly on our dataset. Using the sample dataset, scatterplots were produced to show strong correlations between ____ and ____. 
 (Wait for Sneha’s push)
+
+
+----------------------------
+To download the FEMA dataset, please refer to the link below:
+[FEMA National Flood Insurance Policy database - Kaggle Link](https://www.kaggle.com/datasets/lynma01/femas-national-flood-insurance-policy-database/data)
+
+
+Environment Setup Instructions
