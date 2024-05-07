@@ -14,7 +14,7 @@ As for data visualization, the preprocessing of the data introduced a few challe
 
 
 ----------------------------
-To download the FEMA dataset, please refer to the link below:
+To download the FEMA dataset, please refer to the link:
 [FEMA National Flood Insurance Policy database - Kaggle Link](https://www.kaggle.com/datasets/lynma01/femas-national-flood-insurance-policy-database/data)
 
 
