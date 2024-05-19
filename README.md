@@ -38,10 +38,10 @@ Next, we created bar graphs to compare RMSE and R² values for the training and 
 Based on the comparison from above, we determined that our linear regression model is IDEAL (e.g., not overfitting or underfitting).
 
 ## RMSE and R² Values:
--RMSE for Training set: 118.133
--R² squared value for Training set: 0.995
--RMSE for Testing set: 117.118
--R² squared value for Testing set: 0.995
+- RMSE for Training set: 118.133
+- R² squared value for Training set: 0.995
+- RMSE for Testing set: 117.118
+- R² squared value for Testing set: 0.995
 
 ## What Are The Next Models You Are Thinking Of And Why?
 Based on our initial findings, we are considering using the following models:
