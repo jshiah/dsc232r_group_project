@@ -368,7 +368,6 @@ Train R² and Test R²  values are both approximately 0.52, signifying that the 
 **Table 2**. Comparison of Performance Metrics for Predicting Flood Insurance Premiums for Linear Regression and Decision Tree Models. The best model was Linear Regression with 19 features (highlighted).
 
 
-
 # Discussion
 ## Data Exploration
 ## Preprocessing
