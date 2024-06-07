@@ -2,13 +2,29 @@
 UCSD Master of Data Science DSC232R - PySpark Data Analysis Group Project - Spring 2024
 
 # Introduction
-Floods are a common threat to structures in and outside of the United States. Historically, flooding has occurred in all 50 states, and multiple factors such as inclement weather patterns and geography can influence flood risk. (reference 1).
-Physical damage to structures and properties can be covered by insurance policies issued by the National Flood Insurance Program (NFIP) in the event of severe flooding. (reference 2).
-Flood insurance prices estimated by the Federal Emergency Management Agency (FEMA) depend on many factors such as levels of rainfall, costs of rebuilding structures, and distance from the ocean. (reference 3). For example, premiums are expected to increase by 342% in Palm Beach County, FL- specifically in the Tequesta and Jupiter areas. This neighborhood is already the most expensive in South Florida with flood insurance premiums in excess of $7,000 dollars per year. There is an ever-increasing amount of flood risk to regions like Florida as climate change causes rising sea levels and rain bomb situations which are currently overwhelming the Fort Lauderdale area. In addition, new structures being built in flood-prone areas are driving increases in insurance premiums (reference 4).   
-The FEMA National Flood Insurance Policy database includes 45 features and 50,406,943 observations of flood policy transactions collected from all states in the U.S. that are participating in the National Flood Insurance Program (NFIP). This dataset was chosen due to its ample size, and it contains many features and observations that can be utilized for predictive modeling. While this dataset contains considerable null values, data imputation was implemented to reduce bias, enabling maximal utilization as well as creation of accurate and robust models. The source of the data is FEMA, a reputable government agency. This provides transparency of the conditions in the United States with respect to flooding and allows users of the data to make informed decisions. The dataset was relatively easy to interpret, enabling creation of accurate feature descriptions to be used for predictive modeling. Finally, this dataset was chosen because our group was interested in investigating ways in which floods can be predicted and ultimately prevented as they are prevalent across the United States, as outlined above. 
+Within the United States, flooding is a common hazard that affects all 50 states. Multiple factors such as weather trends and natural environment modifications influence flood risk, not just history.<sup>1</sup>
+Physical damage to structures can be covered by the National Flood Insurance Policy (NFIP) to repair damage when flooding occurs. Building coverage and content coverage are two kinds of policies provided by NFIP to keep structures and belongings protected in the event that flood-related damage occurs.<sup>2</sup>
+The way that the Federal Emergency Management Agency (FEMA) estimates flood policy pricing has changed, and is dependent on many features such as levels of rainfall, rebuilding costs, and a specific property’s distance from the ocean. For instance, premiums are expected to increase by 342% in the South Florida neighborhoods of Tequesta and Jupiter, which are especially prone to flooding. This area is already the most expensive South Florida neighborhood for flood insurance, having premiums in excess of $7000 dollars per year. Florida on the whole faces increased flood risks due to climate change and inclement weather, and new structures being built are driving increases in newly issued insurance premiums.<sup>3</sup>  
+
+The FEMA National Flood Insurance Policy database<sup>4</sup> includes 45 feature columns and 50,406,943 observations of policy transactions collected from all states in the U.S. that are participating in the National Flood Insurance Program (NFIP). This dataset was chosen for a number of reasons. First, it is adequately sized, and contains many features which should allow us to carry out predictive modeling. While this dataset contains many missing values, we plan to implement data imputation to enable the dataset to be fully utilized as well as allow for creation of more accurate and robust models. The data is provided by FEMA, a reputable source of government data, which provides valuable insight into the conditions in the United States with respect to flooding and empowers users of the data to make informed, data-driven decisions. Next, the columns within the dataset were easy to interpret, enabling creation of accurate feature descriptions, making it easier to carry out predictive modeling. Finally, this dataset was chosen because we were interested in investigating ways in which floods can be predicted and ultimately mitigated or prevented, as they are so prevalent in the United States as discussed above.
+
 
 -- Please refer to the [FEMA Data Exploration Jupyter Notebook](pyspark.ipynb) to review data exploration on summary statistics and data distribution. --
 
+----
+
+ <sup>1</sup>Floods - FEMA building science branch hazard overview. (2017, March). https://www.fema.gov/sites/default/files/2020-07/fema_p1086_flood_2017.pdf  
+ <sup>2</sup>From the pages of The Cost of Flooding and What’s Covered? pages of Win this hurricane season. | The National Flood Insurance Program. (n.d.). https://www.floodsmart.gov/  
+ <sup>3</sup>Rivero, N. (2023, May 21). Flood insurance costs will soar in Florida. See the expected increases in your zip code. WUSF. https://www.wusf.org/weather/2023-05-21/flood-insurance-costs-soar-florida-see-expected-increases-zip-code  
+ <sup>4</sup>FEMA’s National Flood Insurance Policy Database. Kaggle. (2020, May 29). https://www.kaggle.com/datasets/lynma01/femas-national-flood-insurance-policy-database 
+
+
+
+
+
+
+
+----
 # Methods
 ## Data Exploration
 1. Printed schema and created descriptions of all the columns.  
