@@ -367,7 +367,6 @@ Train R² and Test R²  values are both approximately 0.52, signifying that the 
 
 **Table 2**. Comparison of Performance Metrics for Predicting Flood Insurance Premiums for Linear Regression and Decision Tree Models. The best model was Linear Regression with 19 features (highlighted).
 
-
 # Discussion
 ## Data Exploration
 ## Preprocessing
@@ -384,12 +383,20 @@ Our Decision Tree models did not match performance of the Linear Regression Mode
 Decision trees do well at capturing non-linear interactions between features. However, if the interactions are predominantly linear (as is the case with this dataset), linear regression models will perform better, which is indeed what we observed.  
 
 # Conclusion 
-Decision tree models, while providing better R² values and lower RMSEs compared to linear regression with fewer features, did not match the performance of the linear regression models when more features were incorporated. This was likely due to the decision tree model’s tendency to overfit and its suboptimal handling of linear relationships in the data.  
+Decision tree models, while providing better R² values and lower RMSEs compared to linear regression with fewer features, did not match the performance of the linear regression models when more features were incorporated. This was likely due to the decision tree model’s tendency to overfit and its suboptimal handling of linear relationships in the data. 
 
-Linear Regression with 10 or more features showed decent performance, although relatively low RMSE and R² values of approximately 52%, indicate suboptimal predictive power and fit compared to Linear Regression. The decision tree models did not perform as well as the linear regression models with the same number of features, particularly in terms of generalization to the data. Hence, we recommend use of a Linear Regression model utilizing 19 features for optimum performance in predicting insurance premiums.  
+![barplot](https://github.com/deerings/dsc232r_group_project/assets/12570888/24276bd9-e91e-457d-8a0a-4047095a970b)
+
+**Figure 3**. Barplot comparing R<sup>2</sup> for train and test data for Linear Regression and Decision Tree Models.
+
+Decision Tree Models with 10 or more features showed decent performance, although relatively low RMSE and R² values of approximately 52%, indicate suboptimal predictive power and fit compared to Linear Regression which had R² of 99.5% and a much lower RMSE. The decision tree models did not perform as well as the linear regression models with the same number of features, particularly in terms of generalization to the data. Hence, we recommend use of a Linear Regression model utilizing 19 features for optimum performance in predicting insurance premiums.  
 
 # Recommendations for Future Work:
 Advanced visualization tools like Tableau and Power BI could also be employed to create a robust, interactive dashboard. These sorts of tools offer superior performance optimization, interactivity, and visual appeal and can be built to handle large datasets such as this one efficiently and are highly customizable and can provide real-time or near real-time data integration. This approach would provide a useful framework to showcase geographical data, visualize flood risk estimates and insurance premiums, allowing users to explore and interact with the dataset more effectively.  
+
+<img width="888" alt="Screenshot 2024-06-07 at 00 41 30" src="https://github.com/deerings/dsc232r_group_project/assets/12570888/cd4e1589-3410-479f-bea9-d6bf255df178">
+
+**Figure 4**. A sample static map we created showing flood risk color-coded by region.
 
 # Collaboration
 All group members located sample data sets to use in this project, co-wrote the readme, and developed the `pyspark.ipynb` file.  
