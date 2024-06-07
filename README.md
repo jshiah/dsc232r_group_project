@@ -23,11 +23,11 @@ The FEMA National Flood Insurance Policy database includes 45 features and 50,40
 1. Utilized methods like .sample() and .toPandas() to create and visualize a sample dataset that is 0.1 of the original dataset (since the dataset  is too large to create scatterplots using all of the data).  
 
 ## Model 1 – Linear Regression
-•	Feature importance scores are displayed for the 19 independent variables of the Linear Regression model out of the 20 numerical columns where the dependent variable is the total insurance premium of the policy  
-•	Various Linear Regression models were constructed with 1 Feature being the column that had the highest feature importance score, 5 features, 10 features, 15 features and finally 19 features  
-•	Dataset is split into 70% train data and 30% test data  
-•	Models are evaluated based on train and test root mean squared error (RMSE) and R-squared values using the RegressionEvaluator library  
-•	A fitting graph is constructed such that x = number of features in model and y = error.   
+1. Feature importance scores are displayed for the 19 independent variables of the Linear Regression model out of the 20 numerical columns where the dependent variable is the total insurance premium of the policy  
+1. Various Linear Regression models were constructed with 1 Feature being the column that had the highest feature importance score, 5 features, 10 features, 15 features and finally 19 features  
+1. Dataset is split into 70% train data and 30% test data  
+1. Models are evaluated based on train and test root mean squared error (RMSE) and R-squared values using the RegressionEvaluator library  
+1. A fitting graph is constructed such that x = number of features in model and y = error.   
 ``` python
 lr_f19 = LinearRegression(
     featuresCol='predict_features_19', 
@@ -58,11 +58,11 @@ r2_test_f19 = evaluator_r2_f19.evaluate(predictions_rmse_test_f19)
 print("R-squared (R2) on test data for Linear Regression using 19 features: {:.7f}".format(r2_test_f19))
 ```
 ## Model 2 – Decision Trees
-•	Feature importance scores are found for the 19 independent variables of the Decision Tree model out of the 20 numerical columns where the dependent variable is the total insurance premium of the policy  
-•	Decision Tree models were constructed with 1 Feature being the column that had the highest feature importance score, 5 features, 10 features, 15 features and finally 19 features  
-•	Dataset is split into 70% train data and 30% test data  
-•	Models are evaluated based on train and test root mean squared error (RMSE) and R-squared values using the RegressionEvaluator library  
-•	A fitting graph is constructed such that x = number of features in model and y = error    
+1. Feature importance scores are found for the 19 independent variables of the Decision Tree model out of the 20 numerical columns where the dependent variable is the total insurance premium of the policy  
+1. Decision Tree models were constructed with 1 Feature being the column that had the highest feature importance score, 5 features, 10 features, 15 features and finally 19 features  
+1. Dataset is split into 70% train data and 30% test data  
+1. Models are evaluated based on train and test root mean squared error (RMSE) and R-squared values using the RegressionEvaluator library  
+1. A fitting graph is constructed such that x = number of features in model and y = error    
 ``` python
 dt_f19 = DecisionTreeRegressor(featuresCol='predict_features_19', labelCol='totalinsurancepremiumofthepolicy', predictionCol='predicted_premium_f19')
 dt_model_f19 = dt_f19.fit(train_data_f19)
@@ -140,7 +140,57 @@ Descriptions of the columns from the FEMA's National Flood Insurance Policy Data
 `ratemethod (integer)`: Describes the method used to calculate the insurance rate, impacting how premiums are determined.  
 `locationofcontents (string)`: Specifies where within the property the insured contents are located, relevant for claims and risk assessments.  
 
-**** MISSING DATA TABLE GOES HERE ****
+## Missing Data
+
+|Feature:                           | Missing Values:|
+| -----------------------------------|----------------|
+ cancellationdateoffloodpolicy      | 43614057
+ obstructiontype                    | 40629070
+ agriculturestructureindicator      | 38923313 
+ lowestadjacentgrade                | 34940579 
+ nonprofitindicator                 | 34493094
+ houseofworshipindicator            | 34476251
+ basefloodelevation                 | 33636759 
+ smallbusinessindicatorbuilding     | 33451148 
+ lowestfloorelevation               | 33060602
+ elevationcertificateindicator      | 32606397
+ locationofcontents                 | 15389767
+ deductibleamountincontentscoverage | 5561584
+ ratemethod                         | 902967     
+ deductibleamountinbuildingcoverage | 661993   
+ censustract                        | 467119  
+ latitude                           | 338699   
+ longitude                          | 338699
+ originalconstructiondate           | 180318 
+ postfirmconstructionindicator      | 180276      
+ floodzone                          | 169145 
+ numberoffloorsininsuredbuilding    | 162301    
+ countycode                         | 48999
+ primaryresidenceindicator          | 21884        
+ basementenclosurecrawlspacetype    | 802      
+ elevatedbuildingindicator          | 258      
+ construction                       | 13 
+ reportedzipcode                    | 7
+ occupancytype                      | 6              
+ condominiumindicator               | 6 
+ policytermindicator                | 3
+ regularemergencyprogramindicator   | 2        
+ reportedcity                       | 2           
+ crsdiscount                        | 0        
+ elevationdifference                | 0        
+ federalpolicyfee                   | 0        
+ hfiaasurcharge                     | 0        
+ originalnbdate                     | 0        
+ policycost                         | 0        
+ policycount                        | 0        
+ policyeffectivedate                | 0        
+ policyterminationdate              | 0        
+ propertystate                      | 0               
+ totalbuildinginsurancecoverage     | 0        
+ totalcontentsinsurancecoverage     | 0        
+ totalinsurancepremiumofthepolicy   | 0  
+
+**Table 1**: This table outlines the number of missing values in the dataset. This is described in further detail below.
 
 ### High Missing Values:
 Cancellation Date of Policy, Obstruction Type, Agriculture Structure Indicator, Lowest Adjacent Grade, Non-Profit Indicator, House of Worship Indicator, Base Flood Elevation, Small Business Indicator Building, Lowest Floor Elevation, Elevation Certificate Indicator: These features have approximately 43-32 million missing values each.   
@@ -158,32 +208,40 @@ The remaining features in the dataframe have between approximately 800 and 0 mis
 Base Flood Elevation:  
 Average (Mean): 119.47 ft.    
 Standard Deviation: 522.49 ft.  
-Range: -9999 - 85,640 ft.    
+Range: -9999 - 85,640 ft. 
+
 Lowest Adjacent Grade:  
 Average (Mean): 129.20 ft.    
 Standard Deviation: 609.92 ft.    
-Range: -9,999 - 99,990.9 ft.    
+Range: -9,999 - 99,990.9 ft.
+
 Lowest Floor Elevation:  
 Average (Mean): 385.62 ft.  
 Standard Deviation: 1,676.42 ft.  
-Range: -9,997.9 - 99,989 ft.  
+Range: -9,997.9 - 99,989 ft. 
+
 Basement Enclosure Crawl Space Type:  
 Average (Mean): 0.37, indicating a slight bias towards lower classifications.  
 Standard Deviation: 0.86, showing moderate variability within the data.  
-Range: Min 0 to Max 4, spanning several classification levels.  
+Range: Min 0 to Max 4, spanning several classification levels. 
+
 Census Tract:  
 Average (Mean): Approximately 2.6 x 10¹⁰.  
 Standard Deviation: About 1.58 x 10¹⁰, suggesting a wide spread across census tracts.  
+
 CRS Discount:  
 Average: 0.064, typically low across the dataset.  
-Standard Deviation: 0.091, with most data points close to zero but some higher values.  
+Standard Deviation: 0.091, with most data points close to zero but some higher values. 
+
 Deductible Amount in Building and Contents Coverage:  
 Building Coverage Average: 1.66 with a deviation of 1.46.  
 Contents Coverage Average: 0.98 with a deviation of 1.05.  
 Both show low average deductible amounts but with notable variation.  
+
 Elevation Difference:  
 Average: 1.69, indicating minor differences in elevation on average.  
-Standard Deviation: 3.39, suggesting significant outliers affecting the elevation difference.  
+Standard Deviation: 3.39, suggesting significant outliers affecting the elevation difference.
+
 Policy Related Figures (Policy Cost, Policy Count, Total Insurance Coverage, etc.):  
 These values have a high mean and standard deviation, indicating a significant spread in the policy costs and coverages, reflecting diverse insurance policies and property valuations.  
 
@@ -238,9 +296,12 @@ print("R-squared (R2) on test data for Linear Regression using 19 features: {:.7
 ```
 ### Interpretation:
 Low Train RMSE and Test RMSE values indicate that the model can predict insurance premiums with high accuracy.  
-Train R² and Test R² values are both very close to 1, signifying that the model explains nearly all the variability in the response data around its mean.  
-**** FIGURE 1 GOES HERE ****
+Train R² and Test R² values are both very close to 1, signifying that the model explains nearly all the variability in the response data around its mean. 
 
+  ![image](https://github.com/deerings/dsc232r_group_project/assets/12570888/2385a3af-9212-4267-b17e-6478f230e317)
+
+**Figure 1.** Fitting Graph for Model 1 - Linear Regression. RMSE Decreases slightly going from one to four features, and decreases significantly going from five to ten features. RMSE remains consistently low at fifteen and nineteen features, indicating that the model fits the data relatively well with the inclusion of ten features and beyond.![image]
+ 
 ## Model 2 – Decision Trees
 1. Five different Decision Tree models were tested, each with a different number of features ranging from 1 to 19.
 1. Results consistently showed that Linear Regression models significantly outperformed Decision Tree models.
@@ -281,9 +342,16 @@ print("R-squared (R2) on test data for Decision Tree using 10 features: {:.7f}".
 ### Interpretation:
 High Train RMSE and Test RMSE values indicate that the model cannot predict insurance premiums with high accuracy.  
 Train R² and Test R²  values are both approximately 0.52, signifying that the model only explains about half of the variability in the response data around its mean.  
-**** FIGURE 2 GOES HERE ****
 
-**** TABLE 2 GOES HERE ****
+ ![image](https://github.com/deerings/dsc232r_group_project/assets/12570888/18f00a63-d522-42e1-ac49-fee32ab61fda)
+
+**Figure 2**. Fitting Graph for Model 2 - Decision Trees. RMSE decreases slightly moving from one to five features, but does not decrease significantly moving from five features to ten and on. This indicates that the decision tree models do not fit the data well.
+
+ ![image](https://github.com/deerings/dsc232r_group_project/assets/12570888/545b2ccc-5d90-4df2-9ce4-57e167bab039)
+
+**Table 2**. Comparison of Performance Metrics for Predicting Flood Insurance Premiums for Linear Regression and Decision Tree Models. The best model was Linear Regression with 19 features (highlighted).
+
+
 
 # Discussion
 ## Data Exploration
