@@ -404,7 +404,7 @@ All group members located sample data sets to use in this project, co-wrote the 
 Helped in preprocessing the dataset through data imputation, created a correlation matrix of all numerical columns, made the three scatterplots based on a sample of the dataset, aided Joyce with creating the linear models, and wrote the Introduction and Methods section of the ReadMe.  
  
 - Mengkong Aun:
-Contributions included working on the introduction of the abstract and preprocessing stages, detailing variables, identifying missing values, and summarizing data statistics and distribution. Proposed models included Logistic Regression, Random Forest, K-Means Clustering, and DBSCAN. Developed and explained the results of the second model, the Decision Tree, and contributed to the conclusion section.  
+Contributions included working on the introduction of the abstract and preprocessing stages, detailing variables, identifying missing values, and summarizing data statistics and distribution. Proposed models included Logistic Regression, Random Forest, K-Means Clustering, and DBSCAN. Created flood map visualization. Developed and explained the results of the second model, the Decision Tree, and contributed to the conclusion section.  
 
 - Joyce Shiah:
 
