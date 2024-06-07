@@ -361,10 +361,23 @@ Train R² and Test R²  values are both approximately 0.52, signifying that the 
 
  ![image](https://github.com/deerings/dsc232r_group_project/assets/12570888/18f00a63-d522-42e1-ac49-fee32ab61fda)
 
-**Figure 2**. Fitting Graph for Model 2 - Decision Trees. RMSE decreases slightly moving from one to five features, but does not decrease significantly moving from five features to ten and on. This indicates that the decision tree models do not fit the data well.
+ **Figure 2**. Fitting Graph for Model 2 - Decision Trees. RMSE decreases slightly moving from one to five features, but does not decrease significantly moving from five features to ten and on. This indicates that the decision tree models do not fit the data well.
 
- ![image](https://github.com/deerings/dsc232r_group_project/assets/12570888/545b2ccc-5d90-4df2-9ce4-57e167bab039)
+## Model Performance Comparison
 
+|  Model | Features | Train RMSE | Train R<sup>2</sup>| Test RMSE | Test R<sup>2</sup>|
+|--------|----------|------------|--------------------|-----------|-------------------|
+| Linear Regression | predict_features_1 | 1643.9153 | 0.0035 | 1652.3239 | 0.0034 |
+| Decision Tree | predict_features_1 | 1292.9461 | 0.387 | 1280.3065 | 0.3938 |
+ Linear Regression | predict_features_5 | 1407.3977 | 0.2815 | 1375.844 | 0.2816 |
+ Decision Tree | predict_features_5 | 1152.8593 | 0.5126 |1137.6243 | 0.5214 |
+ Linear Regression | predict_features_10 | 118.1326 | 0.9949 |117.1185 | 0.9949 |
+ Decision Tree | predict_features_10 | 1141.8631 | 0.5219 | 1129.1083 | 0.5284|
+ Linear Regression | predict_features_15 | 117.6226 | 0.9949 |118.2676 | 0.9949|
+ Decision Tree | predict_features_15 | 1146.1381 | 0.5183| 1132.0466 |0.5261|
+ Linear Regression | predict_features_19 | 117.5607 | 0.9949 | 118.0066 |0.995 |
+ Decision Tree | predict_features_19 | 1142.108 | 0.5217 | 1127.5757 | 0.5298 |
+ 
 **Table 2**. Comparison of Performance Metrics for Predicting Flood Insurance Premiums for Linear Regression and Decision Tree Models. The best model was Linear Regression with 19 features (highlighted).
 
 # Discussion
