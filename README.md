@@ -420,6 +420,7 @@ Helped in preprocessing the dataset through data imputation, created a correlati
 Contributions included working on the introduction of the abstract and preprocessing stages, detailing variables, identifying missing values, and summarizing data statistics and distribution. Proposed models included Logistic Regression, Random Forest, K-Means Clustering, and DBSCAN. Created flood map visualization. Developed and explained the results of the second model, the Decision Tree, and contributed to the conclusion section.  
 
 - Joyce Shiah:
+Contributed by coding the Feature Importance linear regression model to find and sort all 19 numerical features by descending order of importance, coded the 5 linear regression models with 1, 5, 10, 15, and 19 selected features, and coded the methods in finding RMSE and R-squared values for each of the 5 linear regression models. Participated in writing the abstract, as well as finalizing and compiling the abstract for Milestone 1 submission.
 
 - Sean Deering:
 Cowrote the abstract, assisted with initial data import to Spark dataframe, performed data exploration and descriptive statistics. Created figures for readme and contributed to results and discussion sections, and created the final `Readme.md` file.
