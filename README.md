@@ -1,5 +1,4 @@
-# dsc232r_group_project
-UCSD Master of Data Science DSC232R - PySpark Data Analysis Group Project - Spring 2024
+# UC San Diego HDSI - DSC232R Big Data Analytics Using Spark - Spring 2024 Final Project 
 
 # Introduction
 Within the United States, flooding is a common hazard that affects all 50 states. Multiple factors such as weather trends and natural environment modifications influence flood risk, not just history.<sup>1</sup>
