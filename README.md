@@ -422,7 +422,7 @@ Contributions included working on the introduction of the abstract and preproces
 Contributed by coding the Feature Importance linear regression model to find and sort all 19 numerical features by descending order of importance, coded the 5 linear regression models with 1, 5, 10, 15, and 19 selected features, and coded the methods in finding RMSE and R-squared values for each of the 5 linear regression models. Participated in writing the abstract, as well as finalizing and compiling the abstract for Milestone 1 submission.
 
 - Sean Deering:
-Cowrote the abstract, assisted with initial data import to Spark dataframe, performed data exploration and descriptive statistics. Created fitting graphs for models 1 and 2 and other figures for readme. Co-wrote the results and discussion sections, and created the final `Readme.md` file.
+Cowrote the abstract, assisted with initial data import to Spark dataframe, performed data exploration and descriptive statistics. Co-wrote the results and discussion sections, and created the final `Readme.md` file.
 
 
 
